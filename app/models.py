@@ -1,14 +1,16 @@
+from __future__ import annotations
+
 from sqlalchemy import DECIMAL, Column, Date, ForeignKey, Integer, String
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import Mapped, relationship
 
 from app.database import Base
 
 
-class Upload(Base):
+class CargoInsurance(Base):
     __tablename__ = "uploads"
     id = Column(Integer, primary_key=True, index=True)
     cargo_date = Column(Date)
-    cargos = relationship("Cargo", back_populates="upload")
+    cargos: Mapped[list[Cargo]] = relationship("Cargo", back_populates="insurance")
 
 
 class Cargo(Base):
@@ -16,8 +18,8 @@ class Cargo(Base):
     id = Column(Integer, primary_key=True, index=True)
     cargo_type = Column(String)
     cargo_rate = Column(DECIMAL(10, 2))
-    upload_id = Column(Integer, ForeignKey("uploads.id"))
-    upload = relationship("Upload", back_populates="cargos")
+    insurance_id = Column(Integer, ForeignKey("uploads.id"))
+    insurance = relationship("CargoInsurance", back_populates="cargos")
 
 
 class Tariff(Base):

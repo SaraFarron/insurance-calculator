@@ -1,5 +1,6 @@
 # insurance-calculator
 Расчет стоимости страховки груза
+https://docs.google.com/document/d/1ET0V9ZsLNsdwkaZQ-M3nC6Kkvx2KS75UUROg3kc68UA/edit?tab=t.0
 
 ## ТЗ
 Сервис должен посчитать стоимость страхования для запроса используя актуальный тариф.(Загружается через API)
@@ -14,5 +15,3 @@ SqlAlhemy ORM
 Postgresql, Mysql, Sqlite – любой на выбор
 Docker
 Docker-compose с докером для постгресса
-
-
