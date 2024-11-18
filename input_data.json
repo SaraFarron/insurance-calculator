@@ -1,0 +1,34 @@
+{
+    "2020-01-01": [
+        {
+            "cargo_type": "Glass",
+            "rate": "0.04"
+        }
+    ],
+    "2020-01-05": [
+        {
+            "cargo_type": "Steel",
+            "rate": "0.07"
+        },
+        {
+            "cargo_type": "Plastic",
+            "rate": "0.03"
+        }
+    ],
+    "2020-01-12": [
+        {
+            "cargo_type": "Wood",
+            "rate": "0.05"
+        }
+    ],
+    "2020-01-20": [
+        {
+            "cargo_type": "Glass",
+            "rate": "0.04"
+        },
+        {
+            "cargo_type": "Metal",
+            "rate": "0.08"
+        }
+    ]
+}
